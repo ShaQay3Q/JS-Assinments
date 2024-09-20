@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get User Name</title>
+</head>
+
+<body>
+
+    <script>
+        // When the page loads, ask for the user's name
+        function meessage() {
+            // Prompt the user for their name
+            const userName = prompt("Welcome! What's your name?");
+
+            // If the user enters a name, update the greeting text
+            if (userName) {
+                const greetingElement = document.getElementById("greeting");
+                greetingElement.textContent = `Hello, ${userName}!`;
+            }
+        }
+        // !!! This line makes sure that the whole HTML part is being rendered
+        // before JS manipulates the DOM
+        window.onload = meessage;
+    </script>
+    <h1 id="greeting">Hello, Guest!</h1>
+
+</body>
+
+</html>
